@@ -1,11 +1,6 @@
 
 package br.com.principal;
 
-/**
- * Alunos: Bruno Rafael HAMMES
- * Eduardo felipe
- */
-
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
@@ -14,7 +9,6 @@ import java.io.Serializable;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 /**
  *
