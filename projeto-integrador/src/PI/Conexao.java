@@ -1,5 +1,5 @@
 
-package br.com.principal;
+package PI;
 
 
 import com.mysql.jdbc.Connection;
