@@ -47,8 +47,7 @@ public final class Conexao implements Serializable
         }
         catch (ClassNotFoundException e) 
         {
-            System.out.println(
-            "Driver JDBC nao foi carregado...");
+            Erro.mensagem(e);
         }
         
     }
@@ -60,9 +59,9 @@ public final class Conexao implements Serializable
             System.out.println("Conectando ao banco...");
             conn = (Connection) DriverManager.getConnection(URL, USER, PASS);
             System.out.println("Conexao efetuada...");
-        } catch (SQLException e) 
+        } catch (SQLException e)
         {
-            System.out.println("Falha na conexao...");
+            Erro.mensagem(e);
         }
     }
     
@@ -78,7 +77,7 @@ public final class Conexao implements Serializable
             System.out.println("Conexao fechada...");
         } catch (SQLException e) 
         {
-            System.out.println("Problemas no fechamento da conexao...");
+            Erro.mensagem(e);
         }
     }
     
@@ -94,7 +93,7 @@ public final class Conexao implements Serializable
         } 
         catch (SQLException e) 
         {
-            System.out.println("Problemas na insercao..."+e.getMessage());
+            Erro.mensagem(e);
         }
         
         fechaConexao();
