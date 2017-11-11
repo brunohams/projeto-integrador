@@ -8,9 +8,9 @@ public class TesteFormatador
     public static void main(String[] args)
     {
 
-        String cpf = "8905. ,., -51af.,sdfasdfa90";
+        String cpf = "89055190";
 
-        System.out.println(Formata.removeCaracterEspecial(cpf));
+        System.out.println(Formata.cep(cpf));
 
     }
 }

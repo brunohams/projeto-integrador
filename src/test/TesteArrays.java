@@ -1,6 +1,7 @@
 package test;
 
 import core.Array;
+import core.Formata;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +19,7 @@ public class TesteArrays
         lista[2] = 1.3;
         lista[3] = 1.3;
 
-
-        Array.exibe(lista);
+        Array.print(lista);
 
     }
 
