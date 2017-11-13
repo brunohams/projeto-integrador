@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="462582f1-8432-4dc3-8322-9928fef1d337" name="Default" comment="Framework Inicializado">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="462582f1-8432-4dc3-8322-9928fef1d337" name="Default" comment="Att">
+      <change beforePath="" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/nbproject/project.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/build.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/manifest.mf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/controller/Registro.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/core/Array.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/core/Conexao.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/core/Data.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/core/Erro.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/core/Formata.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/lib/mysql-connector-java-5.1.44-bin.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/test/TesteArrays.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/test/TesteConexao.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/test/TesteData.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/projeto-integrador/src/test/TesteFormatador.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,6 +94,11 @@
             <path>
               <item name="projeto-integrador" type="b2602c69:ProjectViewProjectNode" />
               <item name="projeto-integrador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projeto-integrador" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto-integrador" type="462c0819:PsiDirectoryNode" />
+              <item name="nbproject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="projeto-integrador" type="b2602c69:ProjectViewProjectNode" />
@@ -346,7 +341,14 @@
       <option name="presentableId" value="Default" />
       <updated>1510342734307</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Att">
+      <created>1510615816383</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1510615816384</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -386,7 +388,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Framework Inicializado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework Inicializado" />
+    <MESSAGE value="Att" />
+    <option name="LAST_COMMIT_MESSAGE" value="Att" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
