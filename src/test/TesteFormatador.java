@@ -1,6 +1,6 @@
 package test;
 
-import core.Formata;
+import util.Formata;
 
 public class TesteFormatador
 {

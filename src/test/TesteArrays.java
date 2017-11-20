@@ -1,7 +1,7 @@
 package test;
 
-import core.Array;
-import core.Formata;
+import util.Array;
+import util.Formata;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,5 @@
 
-package core;
+package util;
 
 
 import java.io.Serializable;

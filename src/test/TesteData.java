@@ -1,6 +1,6 @@
 package test;
 
-import core.Data;
+import util.Data;
 
 import java.util.Date;
 
