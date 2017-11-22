@@ -8,6 +8,8 @@ import dao.core.CargoDAO;
 import dao.core.ConhecimentoDAO;
 import dao.core.ExperienciaDAO;
 import dao.mysql.AreaMySqlDao;
+import util.Erro;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -16,9 +18,9 @@ import java.sql.SQLException;
 public class MySqlDAOFactory extends DAOFactory {
 
     private static final String DRIVER  = "com.mysql.jdbc.Driver";
-    private static final String URL     = "jdbc:mysql://localhost:3306/integrador";
-    private static final String USER    = "root";
-    private static final String PASS    = "";
+    private static final String URL     = "jdbc:mysql://104.131.119.105:3306/integrador";
+    private static final String USER    = "integrador";
+    private static final String PASS    = "presunto";
 
     public MySqlDAOFactory() {
 
@@ -37,8 +39,7 @@ public class MySqlDAOFactory extends DAOFactory {
         try {
             conn = DriverManager.getConnection(URL, USER, PASS);
         } catch (SQLException e) {
-           System.out.println("Problemas ao abrir conexao com o banco (MySQL).");
-           System.out.println(e.getMessage());
+            Erro.mensagem(e);
         }
 
         return conn;

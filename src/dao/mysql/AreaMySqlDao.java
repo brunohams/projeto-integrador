@@ -9,6 +9,8 @@ import java.util.List;
 import model.Area;
 import dao.core.AreaDAO;
 import factory.DAOListener;
+import util.Erro;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -30,9 +32,8 @@ public class AreaMySqlDao implements AreaDAO{
 
         try {
 
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO Areas VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, obj.getId());
-            ps.setString(2, obj.getArea());
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO area VALUES (NULL, ?)", Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, obj.getArea());
             ps.executeUpdate();
 
             // para retornar o id da pessoa adicionada
@@ -45,8 +46,7 @@ public class AreaMySqlDao implements AreaDAO{
             ps.close();
 
         } catch (SQLException e) {
-            System.out.println("Problemas no 'insert' de Area (MySQL).");
-            System.out.println(e.getMessage());
+            Erro.mensagem(e);
         }
 
         obj.setId(id);
@@ -62,15 +62,14 @@ public class AreaMySqlDao implements AreaDAO{
 
         try {
 
-            PreparedStatement ps = conn.prepareStatement("UPDATE area SET area = ? WHERE (id = ?)");
+            PreparedStatement ps = conn.prepareStatement("UPDATE area SET nome = ? WHERE (id = ?)");
             ps.setString(1, obj.getArea());
             ps.setInt(2, obj.getId());
             ps.executeUpdate();
             ps.close();
 
         } catch (SQLException e) {
-            System.out.println("Problemas no 'update' de Area (MySQL).");
-            System.out.println(e.getMessage());
+            Erro.mensagem(e);
         }
 
         DAOListener.getDAOFactory().closeConn(conn);
