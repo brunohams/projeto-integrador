@@ -37,7 +37,6 @@ public class AreaSQLTeste {
         area.setId(1);
         areaDao.insert(area);
 
-
     }
 
 }

@@ -4,11 +4,13 @@
  * and open the template in the editor.
  */
 package dao.mysql;
+import java.util.Date;
+import model.Candidato.EstadoCivil;
+import model.Candidato.Sexo;
 
 import dao.core.CandidatoDAO;
 import factory.DAOListener;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,6 +18,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import model.Candidato;
+import util.Data;
 import util.Erro;
 
 /**
@@ -32,14 +35,14 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
 
         try {
 
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO candidato VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO candidato VALUES (NULL,?,?,?,?,?,?,?,?,?,?,NULL,?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, obj.getCodigo());
             ps.setString(2, obj.getNome());
             ps.setString(3, obj.getCpf());
             ps.setString(4, obj.getSexo().toString());
             ps.setString(5, obj.getEmail());
             ps.setString(6, obj.getTelefone());
-            ps.setDate(7, (Date)obj.getDataNascimento());
+            ps.setString(7, Data.dateBanco(obj.getDataNascimento()));
             ps.setString(8, obj.getRg());
             ps.setString(9, obj.getEstadoCivil().toString());
             ps.setString(10, obj.getNacionalidade());
@@ -82,7 +85,7 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
 
             PreparedStatement ps = conn.prepareStatement("UPDATE candidato SET "
                     + "codigo = ?, nome = ?, cpf = ?, sexo = ?, email = ?, telefone = ?, dataNascimento = ?, rg = ?, estadoCivil = ?, "
-                    + "nacionalidade = ?, deficiencia = ?, cep = ?, endereco = ?, numero = ?, bairro = ?, complemento = ?, cidade = ?,"
+                    + "nacionalidade = ?, deficiencia = NULL, cep = ?, endereco = ?, numero = ?, bairro = ?, complemento = ?, cidade = ?,"
                     + " uf = ?, pretensaoSalarial = ? "
                     + "WHERE (id = ?)");
             
@@ -92,7 +95,7 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
             ps.setString(4, obj.getSexo().toString());
             ps.setString(5, obj.getEmail());
             ps.setString(6, obj.getTelefone());
-            ps.setDate(7, (Date)obj.getDataNascimento());
+            ps.setString(7, Data.dateBanco(obj.getDataNascimento()));
             ps.setString(8, obj.getRg());
             ps.setString(9, obj.getEstadoCivil().toString());
             ps.setString(10, obj.getNacionalidade());
@@ -104,7 +107,9 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
             ps.setString(16, obj.getCidade());
             ps.setString(17, obj.getUf());
             ps.setDouble(18, obj.getPretensaoSalarial());
+
             ps.setInt(19, obj.getId());
+
             ps.executeUpdate();
             ps.close();
 
@@ -141,7 +146,7 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
 
         try {
 
-            PreparedStatement ps = conn.prepareStatement("DELETE FROM candidado WHERE (id = ?)");
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM candidato WHERE (id = ?)");
             ps.setInt(1, id);
             ps.executeUpdate();
             ps.close();
@@ -167,9 +172,26 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
             
             while (rs.next()) {
                 Candidato e = new Candidato();
-                
                 e.setId(rs.getInt("id"));
-                               
+                e.setCodigo(rs.getString("codigo"));
+                e.setNome(rs.getString("nome"));
+                e.setCpf(rs.getString("cpf"));
+                e.setSexo(Sexo.valueOf(rs.getString("sexo")));
+                e.setEmail(rs.getString("email"));
+                e.setTelefone(rs.getString("telefone"));
+                e.setDataNascimento(rs.getDate("dataNascimento"));
+                e.setRg(rs.getString("rg"));
+                e.setEstadoCivil(EstadoCivil.valueOf(rs.getString("estadoCivil")));
+                e.setNacionalidade(rs.getString("nacionalidade"));
+                e.setCep(rs.getString("cep"));
+                e.setEndereco(rs.getString("endereco"));
+                e.setNumero(rs.getString("numero"));
+                e.setBairro(rs.getString("bairro"));
+                e.setComplemento(rs.getString("complemento"));
+                e.setCidade(rs.getString("cidade"));
+                e.setUf(rs.getString("uf"));
+                e.setPretensaoSalarial(rs.getDouble("pretensaoSalarial"));
+
                 list.add(e);
             }
             

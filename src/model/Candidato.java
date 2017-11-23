@@ -194,6 +194,31 @@ public enum EstadoCivil {
     }
     public enum Sexo {
     Masculino, Feminino
-}
+    }
+
+    @Override
+    public String toString() {
+        return "Candidato{" +
+                "id=" + id +
+                ", codigo='" + codigo + '\'' +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", sexo=" + sexo +
+                ", email='" + email + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                ", rg='" + rg + '\'' +
+                ", estadoCivil=" + estadoCivil +
+                ", nacionalidade='" + nacionalidade + '\'' +
+                ", cep='" + cep + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", numero='" + numero + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", complemento='" + complemento + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", uf='" + uf + '\'' +
+                ", pretensaoSalarial=" + pretensaoSalarial +
+                '}';
+    }
 }
 

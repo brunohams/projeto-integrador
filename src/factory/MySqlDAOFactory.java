@@ -8,6 +8,7 @@ import dao.core.CargoDAO;
 import dao.core.ConhecimentoDAO;
 import dao.core.ExperienciaDAO;
 import dao.mysql.AreaMySqlDao;
+import dao.mysql.CandidatoMySqlDAO;
 import util.Erro;
 
 import java.sql.Connection;
@@ -52,7 +53,7 @@ public class MySqlDAOFactory extends DAOFactory {
 
     @Override
     public CandidatoDAO getCadidatoDao() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new CandidatoMySqlDAO();//To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
