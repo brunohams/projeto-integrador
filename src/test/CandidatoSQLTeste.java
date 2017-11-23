@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package test;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -20,19 +21,16 @@ import util.Array;
 import util.Data;
 
 /**
- *
  * @author Aluno
  */
 public class CandidatoSQLTeste {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         lista();
 
     }
 
-    public static void lista()
-    {
+    public static void lista() {
 
         CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
 
@@ -42,8 +40,7 @@ public class CandidatoSQLTeste {
 
     }
 
-    public static void testeDeleta(int id)
-    {
+    public static void testeDeleta(int id) {
 
         CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
         Candidato candidato = new Candidato();
@@ -54,8 +51,7 @@ public class CandidatoSQLTeste {
 
     }
 
-    public static void testeAtualiza()
-    {
+    public static void testeAtualiza() {
 
         CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
         Candidato candidato = new Candidato();
@@ -82,16 +78,15 @@ public class CandidatoSQLTeste {
         candidato.setPretensaoSalarial(31231.0D);
 
 
-
         candidatoDAO.update(candidato);
 
     }
 
-    public static void testeInsercao()
-    {
+    public static void testeInsercao() {
 
 
         CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
+
         Candidato candidato = new Candidato();
         candidato.setCodigo("testeCodigo");
         candidato.setNome("Bruno Rafael Hammes");

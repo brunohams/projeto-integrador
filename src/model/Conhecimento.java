@@ -57,5 +57,15 @@ public class Conhecimento  implements Serializable{
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Conhecimento{" +
+                "id=" + id +
+                ", candidatoId=" + candidatoId +
+                ", areaConhecimento=" + areaConhecimento +
+                ", instituicao='" + instituicao + '\'' +
+                ", observacoes='" + observacoes + '\'' +
+                '}';
+    }
 }

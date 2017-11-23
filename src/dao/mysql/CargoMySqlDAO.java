@@ -132,7 +132,8 @@ public class CargoMySqlDAO implements CargoDAO {
                 Cargo e = new Cargo();
 
                 e.setId(rs.getInt("id"));
-
+                e.setAreaId(rs.getInt("areaId"));
+                e.setNome(rs.getString("nome"));
 
                 list.add(e);
             }
@@ -164,7 +165,8 @@ public class CargoMySqlDAO implements CargoDAO {
 
             while (rs.next()) {
                 Cargo.setId(rs.getInt("id"));
-
+                Cargo.setAreaId(rs.getInt("areaId"));
+                Cargo.setNome(rs.getString("nome"));
             }
 
             rs.close();

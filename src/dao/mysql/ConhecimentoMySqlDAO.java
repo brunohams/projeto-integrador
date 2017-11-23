@@ -136,7 +136,10 @@ public class ConhecimentoMySqlDAO implements ConhecimentoDAO{
                 Conhecimento e = new Conhecimento();
 
                 e.setId(rs.getInt("id"));
-
+                e.setCandidatoId(rs.getInt("candidatoId"));
+                e.setAreaConhecimento(rs.getInt("areaConhecimento"));
+                e.setInstituicao(rs.getString("instituicao"));
+                e.setObservacoes(rs.getString("observacoes"));
 
                 list.add(e);
             }
