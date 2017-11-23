@@ -27,7 +27,7 @@ public class Candidato implements Serializable{
     private String nacionalidade;
     private String cep;
     private String endereco;
-    private int numero;
+    private String numero;
     private String bairro;
     private String complemento;
     private String cidade; 
@@ -145,11 +145,11 @@ public enum EstadoCivil {
         this.endereco = endereco;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
