@@ -160,7 +160,7 @@ public class ConhecimentoMySqlDAO implements ConhecimentoDAO{
     @Override
     public Conhecimento listByKey(Integer id) {
 
-        Conhecimento Conhecimento = new Conhecimento();
+        Conhecimento conhecimento = new Conhecimento();
         Connection conn = DAOListener.getDAOFactory().openConn();
 
         try {
@@ -170,7 +170,11 @@ public class ConhecimentoMySqlDAO implements ConhecimentoDAO{
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Conhecimento.setId(rs.getInt("id"));
+                conhecimento.setId(rs.getInt("id"));
+                conhecimento.setCandidatoId(rs.getInt("candidatoId"));
+                conhecimento.setAreaConhecimento(rs.getInt("areaConhecimento"));
+                conhecimento.setInstituicao(rs.getString("instituicao"));
+                conhecimento.setObservacoes(rs.getString("observacoes"));
 
             }
 
@@ -184,7 +188,7 @@ public class ConhecimentoMySqlDAO implements ConhecimentoDAO{
 
         DAOListener.getDAOFactory().closeConn(conn);
 
-        return Conhecimento;
+        return conhecimento;
     }
 }
 

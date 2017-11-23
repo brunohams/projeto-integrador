@@ -223,6 +223,24 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
             
             while (rs.next()) {
                 candidato.setId(rs.getInt("id"));
+                candidato.setCodigo(rs.getString("codigo"));
+                candidato.setNome(rs.getString("nome"));
+                candidato.setCpf(rs.getString("cpf"));
+                candidato.setSexo(Sexo.valueOf(rs.getString("sexo")));
+                candidato.setEmail(rs.getString("email"));
+                candidato.setTelefone(rs.getString("telefone"));
+                candidato.setDataNascimento(rs.getDate("dataNascimento"));
+                candidato.setRg(rs.getString("rg"));
+                candidato.setEstadoCivil(EstadoCivil.valueOf(rs.getString("estadoCivil")));
+                candidato.setNacionalidade(rs.getString("nacionalidade"));
+                candidato.setCep(rs.getString("cep"));
+                candidato.setEndereco(rs.getString("endereco"));
+                candidato.setNumero(rs.getString("numero"));
+                candidato.setBairro(rs.getString("bairro"));
+                candidato.setComplemento(rs.getString("complemento"));
+                candidato.setCidade(rs.getString("cidade"));
+                candidato.setUf(rs.getString("uf"));
+                candidato.setPretensaoSalarial(rs.getDouble("pretensaoSalarial"));
             }
             
             rs.close();
