@@ -195,7 +195,7 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
 
         try {
 
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM candidatoWHERE id = ?");
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM candidato WHERE id = ?");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             
