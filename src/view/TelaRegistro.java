@@ -706,12 +706,12 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         boxFormacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Selecione --", "Ensino fundamental", "Ensino Médio", "Graduação", "Pós-Graduação", "Mestrado", "Doutorado" }));
         boxFormacao.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 boxFormacaoAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         boxFormacao.addActionListener(new java.awt.event.ActionListener() {
