@@ -514,7 +514,7 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel26.setText("Pretenção salarial");
 
-        fieldEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
+        fieldEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro", "Divorciado", "Casado" }));
         fieldEstadoCivil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldEstadoCivilActionPerformed(evt);
