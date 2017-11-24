@@ -54,45 +54,6 @@ public class TelaRegistro extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        Lista3 = new javax.swing.JPanel();
-        btnAdicionar1 = new javax.swing.JButton();
-        btnRemover1 = new javax.swing.JButton();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        tabelaPrincipal = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
-        Lista = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        labelNome = new javax.swing.JLabel();
-        labelEmail = new javax.swing.JLabel();
-        labelCEP = new javax.swing.JLabel();
         Lista1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -161,8 +122,15 @@ public class TelaRegistro extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         fieldDataDemissao = new javax.swing.JTextField();
+        Lista3 = new javax.swing.JPanel();
+        btnAdicionar1 = new javax.swing.JButton();
+        btnRemover1 = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tabelaPrincipal = new javax.swing.JTable();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFont(new java.awt.Font("DejaVu Sans", 0, 10)); // NOI18N
         setMaximumSize(new java.awt.Dimension(800, 347));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
@@ -172,272 +140,9 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         mainPanel.setLayout(new java.awt.CardLayout());
 
-        btnAdicionar1.setText("Adicionar");
-        btnAdicionar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicionar1ActionPerformed(evt);
-            }
-        });
-
-        btnRemover1.setText("Remover");
-        btnRemover1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemover1ActionPerformed(evt);
-            }
-        });
-
-        tabelaPrincipal.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Nome", "Telefone", "Cidade", "Pretenção Salarial"
-            }
-        ));
-        jScrollPane6.setViewportView(tabelaPrincipal);
-
-        jButton2.setText("Detalhes");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout Lista3Layout = new javax.swing.GroupLayout(Lista3);
-        Lista3.setLayout(Lista3Layout);
-        Lista3Layout.setHorizontalGroup(
-            Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lista3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 628, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAdicionar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRemover1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(194, Short.MAX_VALUE))
-        );
-        Lista3Layout.setVerticalGroup(
-            Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lista3Layout.createSequentialGroup()
-                .addGroup(Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Lista3Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(btnAdicionar1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRemover1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2))
-                    .addGroup(Lista3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-
-        mainPanel.add(Lista3, "card1");
-
-        jLabel28.setText("Nome:");
-
-        jLabel29.setText("E-mail:");
-
-        jLabel33.setText("CEP:");
-
-        jLabel34.setText("Nacionalidade:");
-
-        jLabel35.setText("UF:");
-
-        jLabel36.setText("Sexo:");
-
-        jLabel37.setText("CPF:");
-
-        jLabel38.setText("RG:");
-
-        jLabel39.setText("Endereço:");
-
-        jLabel40.setText("Nº:");
-
-        jLabel41.setText("Bairro:");
-
-        jLabel42.setText("Telefone:");
-
-        jLabel43.setText("Estado civil:");
-
-        jLabel44.setText("Cidade:");
-
-        jLabel45.setText("Complemento:");
-
-        jLabel46.setText("Data de nascimento:");
-
-        jLabel47.setText("Pretenção salarial:");
-
-        jLabel48.setText("Deficiência:");
-
-        jLabel49.setText("Observações:");
-
-        jLabel50.setText("Formação escolar:");
-
-        jLabel51.setText("Fase escolar:");
-
-        jLabel52.setText("Nome do curso:");
-
-        jLabel53.setText("Situação:");
-
-        jLabel54.setText("Descrição do curso:");
-
-        jLabel55.setText("Nome da empresa:");
-
-        jLabel56.setText("Data admissão:");
-
-        jLabel57.setText("Data demissão:");
-
-        jLabel58.setText("Cargo:");
-
-        jLabel59.setText("Observação:");
-
-        labelNome.setText(" ");
-
-        labelEmail.setText(" ");
-
-        labelCEP.setText(" ");
-
-        javax.swing.GroupLayout ListaLayout = new javax.swing.GroupLayout(Lista);
-        Lista.setLayout(ListaLayout);
-        ListaLayout.setHorizontalGroup(
-            ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ListaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ListaLayout.createSequentialGroup()
-                        .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ListaLayout.createSequentialGroup()
-                                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel36)
-                                    .addComponent(jLabel34)
-                                    .addComponent(jLabel35)
-                                    .addGroup(ListaLayout.createSequentialGroup()
-                                        .addComponent(jLabel33)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(labelCEP))
-                                    .addGroup(ListaLayout.createSequentialGroup()
-                                        .addComponent(jLabel29)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(labelEmail))
-                                    .addGroup(ListaLayout.createSequentialGroup()
-                                        .addComponent(jLabel28)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(labelNome)))
-                                .addGap(179, 179, 179)
-                                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(ListaLayout.createSequentialGroup()
-                                        .addGap(16, 16, 16)
-                                        .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(ListaLayout.createSequentialGroup()
-                                                    .addComponent(jLabel39)
-                                                    .addGap(33, 33, 33))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ListaLayout.createSequentialGroup()
-                                                    .addGap(1, 1, 1)
-                                                    .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLabel38)
-                                                        .addComponent(jLabel37))))
-                                            .addGroup(ListaLayout.createSequentialGroup()
-                                                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel40)
-                                                    .addGroup(ListaLayout.createSequentialGroup()
-                                                        .addGap(2, 2, 2)
-                                                        .addComponent(jLabel41)))
-                                                .addGap(82, 82, 82))))
-                                    .addComponent(jLabel48))
-                                .addGap(190, 190, 190)
-                                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel45)
-                                    .addComponent(jLabel44)
-                                    .addComponent(jLabel43)
-                                    .addComponent(jLabel42)
-                                    .addComponent(jLabel46)
-                                    .addComponent(jLabel47)))
-                            .addComponent(jLabel49))
-                        .addContainerGap(239, Short.MAX_VALUE))
-                    .addGroup(ListaLayout.createSequentialGroup()
-                        .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel54)
-                            .addComponent(jLabel51)
-                            .addComponent(jLabel50)
-                            .addComponent(jLabel52)
-                            .addComponent(jLabel53))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel59)
-                            .addComponent(jLabel58)
-                            .addComponent(jLabel56)
-                            .addComponent(jLabel55)
-                            .addComponent(jLabel57))
-                        .addGap(364, 364, 364))))
-        );
-        ListaLayout.setVerticalGroup(
-            ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ListaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel37)
-                    .addComponent(jLabel42)
-                    .addComponent(labelNome))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29)
-                    .addComponent(jLabel38)
-                    .addComponent(jLabel43)
-                    .addComponent(labelEmail))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel33)
-                    .addComponent(jLabel39)
-                    .addComponent(jLabel44)
-                    .addComponent(labelCEP))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel34)
-                        .addComponent(jLabel40))
-                    .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel35)
-                    .addComponent(jLabel41)
-                    .addComponent(jLabel46))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel36)
-                    .addComponent(jLabel48)
-                    .addComponent(jLabel47))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel49)
-                .addGap(33, 33, 33)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel50)
-                    .addComponent(jLabel55))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel51)
-                    .addComponent(jLabel56))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel52)
-                    .addComponent(jLabel57))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel53)
-                    .addComponent(jLabel58))
-                .addGap(10, 10, 10)
-                .addGroup(ListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel54)
-                    .addComponent(jLabel59))
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
-
-        mainPanel.add(Lista, "card4");
-
+        Lista1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Lista1.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
+        Lista1.setInheritsPopupMenu(true);
         Lista1.setPreferredSize(new java.awt.Dimension(800, 346));
 
         jLabel1.setText("Nome");
@@ -462,18 +167,27 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel15.setText("Observações");
 
+        fieldNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fieldNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldNomeActionPerformed(evt);
             }
         });
 
+        fieldCEP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        fieldUF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        fieldCPF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        fieldEndereco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fieldEndereco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldEnderecoActionPerformed(evt);
             }
         });
 
+        fieldBairro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fieldBairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldBairroActionPerformed(evt);
@@ -489,19 +203,27 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         radioFeminino.setText("Feminino");
 
+        fieldTelefone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        fieldCidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        fieldDataDeNascimento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         btnAvancar.setBackground(new java.awt.Color(255, 255, 255));
-        btnAvancar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnAvancar.setFont(new java.awt.Font("DejaVu Sans", 0, 12)); // NOI18N
         btnAvancar.setText("Avançar");
-        btnAvancar.setBorder(null);
+        btnAvancar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnAvancar.setContentAreaFilled(false);
         btnAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAvancarActionPerformed(evt);
             }
         });
 
-        btnCancelar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnCancelar.setFont(new java.awt.Font("DejaVu Sans", 0, 12)); // NOI18N
         btnCancelar.setText("Cancelar");
-        btnCancelar.setBorder(null);
+        btnCancelar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnCancelar.setContentAreaFilled(false);
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);
@@ -514,8 +236,11 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel19.setText("E-mail");
 
+        fieldEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel20.setText("RG");
 
+        fieldRG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fieldRG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldRGActionPerformed(evt);
@@ -526,10 +251,15 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel22.setText("Nacionalidade");
 
+        fieldNacionalidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel23.setText("Nº");
+
+        fieldNumero.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel24.setText("Complemento");
 
+        fieldComplemento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fieldComplemento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldComplementoActionPerformed(evt);
@@ -538,7 +268,10 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel26.setText("Pretenção salarial");
 
+        fieldPretencao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         fieldEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro", "Divorciado", "Casado" }));
+        fieldEstadoCivil.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fieldEstadoCivil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldEstadoCivilActionPerformed(evt);
@@ -571,11 +304,11 @@ public class TelaRegistro extends javax.swing.JFrame {
                                             .addComponent(jLabel1))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(fieldUF, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(fieldNome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                                            .addComponent(fieldNome, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(fieldEmail, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(fieldNacionalidade)
-                                            .addComponent(fieldCEP))))
+                                            .addComponent(fieldCEP)
+                                            .addComponent(fieldUF))))
                                 .addGap(16, 16, 16)
                                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -683,7 +416,7 @@ public class TelaRegistro extends javax.swing.JFrame {
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAvancar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -692,6 +425,9 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         mainPanel.add(Lista1, "card2");
 
+        Lista2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Lista2.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
+        Lista2.setInheritsPopupMenu(true);
         Lista2.setPreferredSize(new java.awt.Dimension(800, 346));
 
         jLabel12.setText("Formação escolar");
@@ -800,7 +536,7 @@ public class TelaRegistro extends javax.swing.JFrame {
                             .addGroup(Lista2Layout.createSequentialGroup()
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE))
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
                             .addGroup(Lista2Layout.createSequentialGroup()
                                 .addGroup(Lista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel30)
@@ -871,7 +607,7 @@ public class TelaRegistro extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(Lista2Layout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addGroup(Lista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAvancar1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -881,6 +617,92 @@ public class TelaRegistro extends javax.swing.JFrame {
         );
 
         mainPanel.add(Lista2, "card3");
+
+        Lista3.setBackground(new java.awt.Color(254, 254, 254));
+        Lista3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Lista3.setToolTipText("");
+        Lista3.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
+        Lista3.setInheritsPopupMenu(true);
+
+        btnAdicionar1.setText("Adicionar");
+        btnAdicionar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnAdicionar1.setContentAreaFilled(false);
+        btnAdicionar1.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        btnAdicionar1.setDefaultCapable(false);
+        btnAdicionar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionar1ActionPerformed(evt);
+            }
+        });
+
+        btnRemover1.setText("Remover");
+        btnRemover1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnRemover1.setContentAreaFilled(false);
+        btnRemover1.setCursor(new java.awt.Cursor(java.awt.Cursor.E_RESIZE_CURSOR));
+        btnRemover1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemover1ActionPerformed(evt);
+            }
+        });
+
+        tabelaPrincipal.setBackground(new java.awt.Color(254, 254, 254));
+        tabelaPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tabelaPrincipal.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
+        tabelaPrincipal.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nome", "Telefone", "Cidade", "Pretenção Salarial"
+            }
+        ));
+        tabelaPrincipal.setFillsViewportHeight(true);
+        tabelaPrincipal.setGridColor(new java.awt.Color(254, 254, 254));
+        tabelaPrincipal.setNextFocusableComponent(btnAdicionar1);
+        tabelaPrincipal.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane6.setViewportView(tabelaPrincipal);
+
+        jButton2.setText("Detalhes");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton2.setContentAreaFilled(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.E_RESIZE_CURSOR));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Lista3Layout = new javax.swing.GroupLayout(Lista3);
+        Lista3.setLayout(Lista3Layout);
+        Lista3Layout.setHorizontalGroup(
+            Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Lista3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 628, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnRemover1, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAdicionar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Lista3Layout.setVerticalGroup(
+            Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Lista3Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(btnAdicionar1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(119, 119, 119)
+                .addComponent(btnRemover1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(85, Short.MAX_VALUE))
+            .addGroup(Lista3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        mainPanel.add(Lista3, "card1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -999,13 +821,6 @@ public class TelaRegistro extends javax.swing.JFrame {
     private void boxFormacaoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_boxFormacaoAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_boxFormacaoAncestorAdded
-
-    private void btnAdicionar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionar1ActionPerformed
-
-
-        CardLayout manager = (CardLayout) mainPanel.getLayout();
-        manager.show(mainPanel, "card2");
-    }//GEN-LAST:event_btnAdicionar1ActionPerformed
 private Integer getSelectedId() {
         if (tabelaPrincipal.getSelectedRow() == -1) {
             return null;
@@ -1015,23 +830,6 @@ private Integer getSelectedId() {
                 tabelaPrincipal.getSelectedRow(), 0);
         return (Integer) valor;
     }
-    private void btnRemover1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemover1ActionPerformed
-
-    CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
-         if (getSelectedId() != null) {
-            int resp = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir o registro???");
-            if (resp == JOptionPane.YES_OPTION)
-                candidatoDAO.delete(getSelectedId());
-        }
-
-    }//GEN-LAST:event_btnRemover1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void fieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldNomeActionPerformed
@@ -1043,6 +841,26 @@ private Integer getSelectedId() {
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
        rederizaTabela();
     }//GEN-LAST:event_formWindowActivated
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnRemover1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemover1ActionPerformed
+
+        CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
+        if (getSelectedId() != null) {
+            int resp = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir o registro???");
+            if (resp == JOptionPane.YES_OPTION)
+            candidatoDAO.delete(getSelectedId());
+        }
+    }//GEN-LAST:event_btnRemover1ActionPerformed
+
+    private void btnAdicionar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionar1ActionPerformed
+
+        CardLayout manager = (CardLayout) mainPanel.getLayout();
+        manager.show(mainPanel, "card2");
+    }//GEN-LAST:event_btnAdicionar1ActionPerformed
 
     private boolean verificaCampoCandidado(HashMap<String, String> aCampo)
     {
@@ -1103,7 +921,6 @@ private Integer getSelectedId() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Lista;
     private javax.swing.JPanel Lista1;
     private javax.swing.JPanel Lista2;
     private javax.swing.JPanel Lista3;
@@ -1161,41 +978,12 @@ private Integer getSelectedId() {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1204,9 +992,6 @@ private Integer getSelectedId() {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JLabel labelCEP;
-    private javax.swing.JLabel labelEmail;
-    private javax.swing.JLabel labelNome;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JRadioButton radioFeminino;
     private javax.swing.JRadioButton radioMasculino;
