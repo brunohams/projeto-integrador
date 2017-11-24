@@ -9,6 +9,7 @@ import java.awt.CardLayout;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -513,7 +514,7 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel26.setText("Pretenção salarial");
 
-        fieldEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", " " }));
+        fieldEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         fieldEstadoCivil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldEstadoCivilActionPerformed(evt);
@@ -916,11 +917,15 @@ public class TelaRegistro extends javax.swing.JFrame {
         aCampo.put("pretensaoSalarial", fieldPretencao.getText());
 
         //Verifica campos nulos
-        verificaCampoCandidado((HashMap<String, String>) aCampo);
+        if (verificaCampoCandidado((HashMap<String, String>) aCampo))
+        {
+             JOptionPane.showMessageDialog(null, "Preencha os campos obrigatórios!");
+             return;
+        }
         
         controller.TelaRegistro telaRegistro = new controller.TelaRegistro();
 
-        telaRegistro.gravaCandidato();
+        telaRegistro.gravaCandidato((HashMap<String, String>) aCampo);
         
         CardLayout manager = (CardLayout) mainPanel.getLayout();
         manager.show(mainPanel, "card3");
@@ -1003,9 +1008,16 @@ public class TelaRegistro extends javax.swing.JFrame {
         for (Map.Entry<String, String> entry : aCampo.entrySet()) 
         {
             
+            String campoNome  = entry.getKey().toString();
+            String campoValor   = entry.getValue().toString();
+            
+            //Campos obrigatorios
+            if (campoNome.equals("nome") || campoNome.equals("cpf") || campoNome.equals("email") || campoNome.equals("cidade") || campoNome.equals("pretensaoSalarial"))
+            {
+                    return campoValor.isEmpty();
+            }
             
             
-            System.out.println("Key : " + entry.getKey() + " Value : " + entry.getValue());
         }
         
         return true;
