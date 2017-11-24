@@ -15,12 +15,16 @@ import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Candidato;
+import util.Data;
 
 /**
  *
  * @author Link
  */
 public class TelaRegistro extends javax.swing.JFrame {
+
+    private boolean isEditando;
+    private Integer ultimoIdPego;
 
     private void rederizaTabela() {
        String[] columnNames = {"ID", "Nome", "Telefone", "Cidade", "Pretensão salarial"};
@@ -54,6 +58,12 @@ public class TelaRegistro extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        Lista3 = new javax.swing.JPanel();
+        btnAdicionar1 = new javax.swing.JButton();
+        btnRemover1 = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tabelaPrincipal = new javax.swing.JTable();
+        btnAlterar = new javax.swing.JButton();
         Lista1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -122,16 +132,9 @@ public class TelaRegistro extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         fieldDataDemissao = new javax.swing.JTextField();
-        Lista3 = new javax.swing.JPanel();
-        btnAdicionar1 = new javax.swing.JButton();
-        btnRemover1 = new javax.swing.JButton();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        tabelaPrincipal = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("DejaVu Sans", 0, 10)); // NOI18N
-        setMaximumSize(new java.awt.Dimension(800, 347));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -139,6 +142,92 @@ public class TelaRegistro extends javax.swing.JFrame {
         });
 
         mainPanel.setLayout(new java.awt.CardLayout());
+
+        Lista3.setBackground(new java.awt.Color(254, 254, 254));
+        Lista3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Lista3.setToolTipText("");
+        Lista3.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
+        Lista3.setInheritsPopupMenu(true);
+
+        btnAdicionar1.setText("Adicionar");
+        btnAdicionar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnAdicionar1.setContentAreaFilled(false);
+        btnAdicionar1.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        btnAdicionar1.setDefaultCapable(false);
+        btnAdicionar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionar1ActionPerformed(evt);
+            }
+        });
+
+        btnRemover1.setText("Remover");
+        btnRemover1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnRemover1.setContentAreaFilled(false);
+        btnRemover1.setCursor(new java.awt.Cursor(java.awt.Cursor.E_RESIZE_CURSOR));
+        btnRemover1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemover1ActionPerformed(evt);
+            }
+        });
+
+        tabelaPrincipal.setBackground(new java.awt.Color(254, 254, 254));
+        tabelaPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tabelaPrincipal.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
+        tabelaPrincipal.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nome", "Telefone", "Cidade", "Pretenção Salarial"
+            }
+        ));
+        tabelaPrincipal.setFillsViewportHeight(true);
+        tabelaPrincipal.setGridColor(new java.awt.Color(254, 254, 254));
+        tabelaPrincipal.setNextFocusableComponent(btnAdicionar1);
+        tabelaPrincipal.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane6.setViewportView(tabelaPrincipal);
+
+        btnAlterar.setText("Alterar");
+        btnAlterar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnAlterar.setContentAreaFilled(false);
+        btnAlterar.setCursor(new java.awt.Cursor(java.awt.Cursor.E_RESIZE_CURSOR));
+        btnAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlterarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Lista3Layout = new javax.swing.GroupLayout(Lista3);
+        Lista3.setLayout(Lista3Layout);
+        Lista3Layout.setHorizontalGroup(
+            Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Lista3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 628, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnRemover1, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                    .addComponent(btnAlterar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAdicionar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Lista3Layout.setVerticalGroup(
+            Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Lista3Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(btnAdicionar1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRemover1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(237, Short.MAX_VALUE))
+            .addGroup(Lista3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        mainPanel.add(Lista3, "card1");
 
         Lista1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Lista1.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
@@ -536,7 +625,7 @@ public class TelaRegistro extends javax.swing.JFrame {
                             .addGroup(Lista2Layout.createSequentialGroup()
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE))
                             .addGroup(Lista2Layout.createSequentialGroup()
                                 .addGroup(Lista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel30)
@@ -607,7 +696,7 @@ public class TelaRegistro extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(Lista2Layout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                         .addGroup(Lista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAvancar1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -617,92 +706,6 @@ public class TelaRegistro extends javax.swing.JFrame {
         );
 
         mainPanel.add(Lista2, "card3");
-
-        Lista3.setBackground(new java.awt.Color(254, 254, 254));
-        Lista3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Lista3.setToolTipText("");
-        Lista3.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
-        Lista3.setInheritsPopupMenu(true);
-
-        btnAdicionar1.setText("Adicionar");
-        btnAdicionar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAdicionar1.setContentAreaFilled(false);
-        btnAdicionar1.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
-        btnAdicionar1.setDefaultCapable(false);
-        btnAdicionar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicionar1ActionPerformed(evt);
-            }
-        });
-
-        btnRemover1.setText("Remover");
-        btnRemover1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnRemover1.setContentAreaFilled(false);
-        btnRemover1.setCursor(new java.awt.Cursor(java.awt.Cursor.E_RESIZE_CURSOR));
-        btnRemover1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemover1ActionPerformed(evt);
-            }
-        });
-
-        tabelaPrincipal.setBackground(new java.awt.Color(254, 254, 254));
-        tabelaPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tabelaPrincipal.setFont(new java.awt.Font("DejaVu Sans", 0, 15)); // NOI18N
-        tabelaPrincipal.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Nome", "Telefone", "Cidade", "Pretenção Salarial"
-            }
-        ));
-        tabelaPrincipal.setFillsViewportHeight(true);
-        tabelaPrincipal.setGridColor(new java.awt.Color(254, 254, 254));
-        tabelaPrincipal.setNextFocusableComponent(btnAdicionar1);
-        tabelaPrincipal.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane6.setViewportView(tabelaPrincipal);
-
-        jButton2.setText("Detalhes");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.E_RESIZE_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout Lista3Layout = new javax.swing.GroupLayout(Lista3);
-        Lista3.setLayout(Lista3Layout);
-        Lista3Layout.setHorizontalGroup(
-            Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lista3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 628, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnRemover1, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAdicionar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        Lista3Layout.setVerticalGroup(
-            Lista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lista3Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(btnAdicionar1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(119, 119, 119)
-                .addComponent(btnRemover1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(85, Short.MAX_VALUE))
-            .addGroup(Lista3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        mainPanel.add(Lista3, "card1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -714,6 +717,9 @@ public class TelaRegistro extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        mainPanel.getAccessibleContext().setAccessibleName("");
+        mainPanel.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -842,10 +848,37 @@ private Integer getSelectedId() {
        rederizaTabela();
     }//GEN-LAST:event_formWindowActivated
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
+    private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+        CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
+        Candidato cand = candidatoDAO.listByKey(getSelectedId());
+        ultimoIdPego = getSelectedId();
+        isEditando = true;
+        alteraCandidato(cand);
+        CardLayout manager = (CardLayout) mainPanel.getLayout();
+        
+        manager.show(mainPanel, "card2");
+    }//GEN-LAST:event_btnAlterarActionPerformed
+private void alteraCandidato(Candidato cand) {
+    fieldBairro.setText(((cand.getBairro() == null) ? "" : cand.getBairro()));
+    fieldCEP.setText(((cand.getCep() == null) ? "" : cand.getCep()));
+    fieldCPF.setText(((cand.getCpf() == null) ? "" : cand.getCpf()));   
+    fieldCidade.setText(((cand.getCidade() == null) ? "" : cand.getCidade()));     
+    fieldDataAdmissao.setText(((Data.dateExibe(cand.getDataNascimento()) == null) ? "" : Data.dateExibe(cand.getDataNascimento())));    //fieldDataDeNascimento.setText(((Data.dateExibe(cand.getDataNascimento()) == null) ? "" : cand.get));
+    //fieldDataDemissao.setText(((cand.get == null) ? "" : cand.get));     
+    fieldEmail.setText(((cand.getEmail() == null) ? "" : cand.getEmail()));
+    fieldEndereco.setText(((cand.getEndereco() == null) ? "" : cand.getEndereco()));     
+    fieldNacionalidade.setText(((cand.getNacionalidade() == null) ? "" : cand.getNacionalidade()));
+    fieldNome.setText(((cand.getNome() == null) ? "" : cand.getNome()));
+    //fieldNomeCurso.setText(((cand.ge == null) ? "" : cand.get));
+   // fieldNomeEmpresa.setText(((cand.get == null) ? "" : cand.get));
+    fieldNumero.setText(((cand.getNumero() == null) ? "" : cand.getNumero()));
+     
+    fieldPretencao.setText(((cand.getPretensaoSalarial().toString() == null) ? "" : cand.getPretensaoSalarial().toString()));
+    fieldRG.setText(((cand.getRg() == null) ? "" : cand.getRg()));
+    fieldTelefone.setText(((cand.getTelefone() == null) ? "" : cand.getTelefone()));
+    fieldUF.setText(((cand.getUf() == null) ? "" : cand.getUf()));
+      
+    }
     private void btnRemover1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemover1ActionPerformed
 
         CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
@@ -929,6 +962,7 @@ private Integer getSelectedId() {
     private javax.swing.JComboBox<String> boxSituacao;
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnAdicionar1;
+    private javax.swing.JButton btnAlterar;
     private javax.swing.JButton btnAvancar;
     private javax.swing.JButton btnAvancar1;
     private javax.swing.JButton btnCancelar;
@@ -958,7 +992,6 @@ private Integer getSelectedId() {
     private javax.swing.JTextField fieldRG;
     private javax.swing.JTextField fieldTelefone;
     private javax.swing.JTextField fieldUF;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
