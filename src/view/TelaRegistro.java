@@ -6,6 +6,9 @@
 package view;
 
 import java.awt.CardLayout;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -81,7 +84,6 @@ public class TelaRegistro extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         fieldNome = new javax.swing.JTextField();
         fieldCEP = new javax.swing.JTextField();
@@ -89,7 +91,6 @@ public class TelaRegistro extends javax.swing.JFrame {
         fieldCPF = new javax.swing.JTextField();
         fieldEndereco = new javax.swing.JTextField();
         fieldBairro = new javax.swing.JTextField();
-        fieldDeficiencia = new javax.swing.JTextField();
         radioMasculino = new javax.swing.JRadioButton();
         radioFeminino = new javax.swing.JRadioButton();
         fieldTelefone = new javax.swing.JTextField();
@@ -100,19 +101,19 @@ public class TelaRegistro extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         fieldObservacoes = new javax.swing.JTextArea();
         jLabel19 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        fieldEmail = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        fieldRG = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        fieldNacionalidade = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        fieldNumero = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        fieldComplemento = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
         fieldPretencao = new javax.swing.JTextField();
+        fieldEstadoCivil = new javax.swing.JComboBox<>();
         Lista2 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -434,9 +435,13 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel10.setText("Sexo");
 
-        jLabel11.setText("Deficiência");
-
         jLabel15.setText("Observações");
+
+        fieldNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldNomeActionPerformed(evt);
+            }
+        });
 
         fieldEndereco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -486,9 +491,9 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel20.setText("RG");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        fieldRG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                fieldRGActionPerformed(evt);
             }
         });
 
@@ -500,13 +505,20 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         jLabel24.setText("Complemento");
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        fieldComplemento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                fieldComplementoActionPerformed(evt);
             }
         });
 
         jLabel26.setText("Pretenção salarial");
+
+        fieldEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", " " }));
+        fieldEstadoCivil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldEstadoCivilActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Lista1Layout = new javax.swing.GroupLayout(Lista1);
         Lista1.setLayout(Lista1Layout);
@@ -535,41 +547,35 @@ public class TelaRegistro extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(fieldUF, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(fieldNome, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jTextField4)
+                                            .addComponent(fieldNome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                                            .addComponent(fieldEmail, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(fieldNacionalidade)
                                             .addComponent(fieldCEP))))
+                                .addGap(16, 16, 16)
                                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(Lista1Layout.createSequentialGroup()
+                                            .addComponent(jLabel5)
+                                            .addGap(33, 33, 33))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Lista1Layout.createSequentialGroup()
+                                            .addGap(1, 1, 1)
+                                            .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel20)
+                                                .addComponent(jLabel2))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                     .addGroup(Lista1Layout.createSequentialGroup()
-                                        .addGap(16, 16, 16)
                                         .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(Lista1Layout.createSequentialGroup()
-                                                    .addComponent(jLabel5)
-                                                    .addGap(33, 33, 33))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Lista1Layout.createSequentialGroup()
-                                                    .addGap(1, 1, 1)
-                                                    .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLabel20)
-                                                        .addComponent(jLabel2))
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                            .addComponent(jLabel23)
                                             .addGroup(Lista1Layout.createSequentialGroup()
-                                                .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel23)
-                                                    .addGroup(Lista1Layout.createSequentialGroup()
-                                                        .addGap(2, 2, 2)
-                                                        .addComponent(jLabel8)))
-                                                .addGap(82, 82, 82))))
-                                    .addGroup(Lista1Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel11)))
+                                                .addGap(2, 2, 2)
+                                                .addComponent(jLabel8)))
+                                        .addGap(82, 82, 82)))
                                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jTextField5)
+                                    .addComponent(fieldNumero, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                                     .addComponent(fieldBairro, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(fieldDeficiencia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                                     .addComponent(fieldEndereco, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(fieldCPF, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(fieldRG, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel24)
@@ -580,12 +586,12 @@ public class TelaRegistro extends javax.swing.JFrame {
                                     .addComponent(jLabel26))
                                 .addGap(18, 18, 18)
                                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(fieldCidade, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(fieldDataDeNascimento, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(fieldTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                                    .addComponent(fieldPretencao)))
+                                    .addComponent(fieldComplemento, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                                    .addComponent(fieldPretencao)
+                                    .addComponent(fieldEstadoCivil, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(jLabel15))
                         .addGap(93, 93, 93))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Lista1Layout.createSequentialGroup()
@@ -610,11 +616,11 @@ public class TelaRegistro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -626,13 +632,13 @@ public class TelaRegistro extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fieldNacionalidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel22)
                         .addComponent(jLabel23))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fieldNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel24)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(fieldComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -644,20 +650,18 @@ public class TelaRegistro extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jLabel11)
                     .addComponent(radioMasculino)
                     .addComponent(radioFeminino)
-                    .addComponent(fieldDeficiencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel26)
                     .addComponent(fieldPretencao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(Lista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAvancar, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
+                    .addComponent(btnAvancar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -706,12 +710,12 @@ public class TelaRegistro extends javax.swing.JFrame {
 
         boxFormacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Selecione --", "Ensino fundamental", "Ensino Médio", "Graduação", "Pós-Graduação", "Mestrado", "Doutorado" }));
         boxFormacao.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 boxFormacaoAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         boxFormacao.addActionListener(new java.awt.event.ActionListener() {
@@ -880,15 +884,39 @@ public class TelaRegistro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldEnderecoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void fieldRGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldRGActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_fieldRGActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void fieldComplementoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldComplementoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_fieldComplementoActionPerformed
 
     private void btnAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvancarActionPerformed
+
+        //Array de campos
+        Map<String, String> aCampo = new HashMap<String, String>();
+        
+        aCampo.put("nome", fieldNome.getText());
+        aCampo.put("cpf", fieldCPF.getText());
+        aCampo.put("sexo", radioMasculino.isSelected() ? "Masculino" : radioFeminino.isSelected() ?  "Feminino" : null);
+        aCampo.put("email", fieldEmail.getText());
+        aCampo.put("telefone", fieldTelefone.getText());
+        aCampo.put("dataNascimento", fieldDataDeNascimento.getText());
+        aCampo.put("rg", fieldRG.getText());
+        aCampo.put("estadoCivil", String.valueOf(fieldEstadoCivil.getSelectedItem()));
+        aCampo.put("nacionalidade", fieldNacionalidade.getText());
+        aCampo.put("cep", fieldCEP.getText());
+        aCampo.put("endereco", fieldEndereco.getText());
+        aCampo.put("numero", fieldNumero.getText());
+        aCampo.put("bairro", fieldBairro.getText());
+        aCampo.put("complemento", fieldComplemento.getText());
+        aCampo.put("cidade", fieldCidade.getText());
+        aCampo.put("uf", fieldUF.getText());
+        aCampo.put("pretensaoSalarial", fieldPretencao.getText());
+
+        //Verifica campos nulos
+        verificaCampoCandidado((HashMap<String, String>) aCampo);
         
         controller.TelaRegistro telaRegistro = new controller.TelaRegistro();
 
@@ -918,12 +946,11 @@ public class TelaRegistro extends javax.swing.JFrame {
         DefaultTableModel val = (DefaultTableModel) tabelaPrincipal.getModel();
             val.addRow(new String[] {nome, cidade, telefone, pretencao});
             
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        float CENTER_ALIGNMENT1 = jTextField1.CENTER_ALIGNMENT;
+        fieldEmail.setText("");
+        fieldRG.setText("");
+        float CENTER_ALIGNMENT1 = fieldEmail.CENTER_ALIGNMENT;
        
-        jTextField1.requestFocus();
+        fieldEmail.requestFocus();
         CardLayout manager = (CardLayout) mainPanel.getLayout();
         manager.show(mainPanel, "card1");
     }//GEN-LAST:event_btnAvancar1ActionPerformed
@@ -961,6 +988,30 @@ public class TelaRegistro extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void fieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldNomeActionPerformed
+
+    private void fieldEstadoCivilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldEstadoCivilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldEstadoCivilActionPerformed
+
+    private boolean verificaCampoCandidado(HashMap<String, String> aCampo)
+    {
+        
+        //Campos obrigatorios
+        for (Map.Entry<String, String> entry : aCampo.entrySet()) 
+        {
+            
+            
+            
+            System.out.println("Key : " + entry.getKey() + " Value : " + entry.getValue());
+        }
+        
+        return true;
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -1016,24 +1067,28 @@ public class TelaRegistro extends javax.swing.JFrame {
     private javax.swing.JTextField fieldCPF;
     private javax.swing.JTextField fieldCargo;
     private javax.swing.JTextField fieldCidade;
+    private javax.swing.JTextField fieldComplemento;
     private javax.swing.JTextField fieldDataAdmissao;
     private javax.swing.JTextField fieldDataDeNascimento;
     private javax.swing.JTextField fieldDataDemissao;
-    private javax.swing.JTextField fieldDeficiencia;
     private javax.swing.JTextArea fieldDescricaoCurso;
+    private javax.swing.JTextField fieldEmail;
     private javax.swing.JTextField fieldEndereco;
+    private javax.swing.JComboBox<String> fieldEstadoCivil;
+    private javax.swing.JTextField fieldNacionalidade;
     private javax.swing.JTextField fieldNome;
     private javax.swing.JTextField fieldNomeCurso;
     private javax.swing.JTextField fieldNomeEmpresa;
+    private javax.swing.JTextField fieldNumero;
     private javax.swing.JTextArea fieldObservacaoEmpresa;
     private javax.swing.JTextArea fieldObservacoes;
     private javax.swing.JTextField fieldPretencao;
+    private javax.swing.JTextField fieldRG;
     private javax.swing.JTextField fieldTelefone;
     private javax.swing.JTextField fieldUF;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -1094,12 +1149,6 @@ public class TelaRegistro extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JLabel labelCEP;
     private javax.swing.JLabel labelEmail;
     private javax.swing.JLabel labelNome;
