@@ -36,24 +36,25 @@ public class CandidatoMySqlDAO implements CandidatoDAO{
         try {
 
             PreparedStatement ps = conn.prepareStatement("INSERT INTO candidato VALUES (NULL,?,?,?,?,?,?,?,?,?,?,NULL,?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, obj.getCodigo());
-            ps.setString(2, obj.getNome());
-            ps.setString(3, obj.getCpf());
-            ps.setString(4, obj.getSexo().toString());
-            ps.setString(5, obj.getEmail());
-            ps.setString(6, obj.getTelefone());
-            ps.setString(7, Data.dateBanco(obj.getDataNascimento()));
-            ps.setString(8, obj.getRg());
-            ps.setString(9, obj.getEstadoCivil().toString());
-            ps.setString(10, obj.getNacionalidade());
-            ps.setString(11, obj.getCep());
-            ps.setString(12, obj.getEndereco());
-            ps.setString(13, obj.getNumero());
-            ps.setString(14, obj.getBairro());
-            ps.setString(15, obj.getComplemento());
-            ps.setString(16, obj.getCidade());
-            ps.setString(17, obj.getUf());
-            ps.setDouble(18, obj.getPretensaoSalarial());
+            
+            ps.setString(1, (obj.getCodigo() == null) ? "" : obj.getCodigo());
+            ps.setString(2, (obj.getNome()  == null) ? "" : obj.getNome());
+            ps.setString(3, (obj.getCpf() == null) ? "" : obj.getCpf());
+            ps.setString(4, (obj.getSexo().toString() == null) ? "Masculino" : obj.getSexo().toString());
+            ps.setString(5, (obj.getEmail()  == null) ? "" : obj.getEmail());
+            ps.setString(6, (obj.getTelefone()  == null) ? "" : obj.getTelefone());
+            ps.setString(7, (Data.dateBanco(obj.getDataNascimento())  == null) ? "18/12/1997" : Data.dateBanco(obj.getDataNascimento()));
+            ps.setString(8, (obj.getRg()  == null) ? "" : obj.getRg());
+            ps.setString(9, (obj.getEstadoCivil().toString()  == null) ? "Solteiro" : obj.getEstadoCivil().toString());
+            ps.setString(10, (obj.getNacionalidade()  == null) ? "" : obj.getNacionalidade());
+            ps.setString(11, (obj.getCep()  == null) ? "" : obj.getCep());
+            ps.setString(12, (obj.getEndereco()  == null) ? "" : obj.getEndereco());
+            ps.setString(13, (obj.getNumero()  == null) ? "" : obj.getNumero());
+            ps.setString(14, (obj.getBairro()  == null) ? "" : obj.getBairro());
+            ps.setString(15, (obj.getComplemento()  == null) ? "" : obj.getComplemento());
+            ps.setString(16, (obj.getCidade()  == null) ? "" : obj.getCidade());
+            ps.setString(17, (obj.getUf()  == null) ? "" : obj.getUf());
+            ps.setDouble(18, (obj.getPretensaoSalarial()  == null) ? 0 : obj.getPretensaoSalarial());
 
             ps.executeUpdate();
 

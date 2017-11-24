@@ -29,7 +29,7 @@ public class MySqlDAOFactory extends DAOFactory {
         {
             URL     = "jdbc:mysql://127.0.0.1:3306/integrador";
             USER    = "root";
-            PASS    = "presunto";
+            PASS    = "";
         }
 
         try {

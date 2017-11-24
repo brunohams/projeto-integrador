@@ -31,6 +31,7 @@ public class CandidatoSQLTeste {
     }
 
     public static void lista() {
+        
 
         CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
 

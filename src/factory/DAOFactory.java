@@ -16,7 +16,7 @@ public abstract class DAOFactory {
     public static final int MYSQL   = 2;
     public static final int ORACLE  = 3;
 
-    protected final boolean LOCAL   = false;
+    protected final boolean LOCAL   = true;
 
     public static DAOFactory getDAOFactory(int whichFactory) {
 
