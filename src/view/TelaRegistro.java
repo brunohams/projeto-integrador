@@ -1017,7 +1017,6 @@ public class TelaRegistro extends javax.swing.JFrame {
                     return campoValor.isEmpty();
             }
             
-            
         }
         
         return true;
