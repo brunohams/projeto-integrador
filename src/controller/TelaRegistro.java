@@ -3,6 +3,7 @@ package controller;
 import dao.core.AreaDAO;
 import dao.core.CandidatoDAO;
 import factory.DAOListener;
+import java.util.HashMap;
 import model.Area;
 
 public class TelaRegistro
@@ -11,7 +12,7 @@ public class TelaRegistro
     /**
      * Salva um candidato
      */
-    public final void gravaCandidato()
+    public final void gravaCandidato(HashMap<String, String> aCampo)
     {
 
          //Insere candidado
