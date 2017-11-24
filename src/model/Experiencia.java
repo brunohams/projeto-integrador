@@ -69,5 +69,16 @@ public class Experiencia {
     public void setCandidatoId(int candidatoId) {
         this.candidatoId = candidatoId;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Experiencia{" +
+                "id=" + id +
+                ", nomeEmpresa='" + nomeEmpresa + '\'' +
+                ", dataInicio=" + dataInicio +
+                ", dataFim=" + dataFim +
+                ", cargo='" + cargo + '\'' +
+                ", candidatoId=" + candidatoId +
+                '}';
+    }
 }

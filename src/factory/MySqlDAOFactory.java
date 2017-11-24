@@ -7,10 +7,7 @@ import dao.core.CandidatoDAO;
 import dao.core.CargoDAO;
 import dao.core.ConhecimentoDAO;
 import dao.core.ExperienciaDAO;
-import dao.mysql.AreaMySqlDao;
-import dao.mysql.CandidatoMySqlDAO;
-import dao.mysql.CargoMySqlDAO;
-import dao.mysql.ConhecimentoMySqlDAO;
+import dao.mysql.*;
 import util.Erro;
 
 import java.sql.Connection;
@@ -20,12 +17,20 @@ import java.sql.SQLException;
 
 public class MySqlDAOFactory extends DAOFactory {
 
+
     private static final String DRIVER  = "com.mysql.jdbc.Driver";
-    private static final String URL     = "jdbc:mysql://104.131.119.105:3306/integrador";
-    private static final String USER    = "integrador";
-    private static final String PASS    = "presunto";
+    private static String URL     = "jdbc:mysql://104.131.119.105:3306/integrador";
+    private static String USER    = "integrador";
+    private static String PASS    = "presunto";
 
     public MySqlDAOFactory() {
+
+        if (LOCAL)
+        {
+            URL     = "jdbc:mysql://127.0.0.1:3306/integrador";
+            USER    = "root";
+            PASS    = "presunto";
+        }
 
         try {
             Class.forName(DRIVER);
@@ -70,7 +75,7 @@ public class MySqlDAOFactory extends DAOFactory {
 
     @Override
     public ExperienciaDAO getExperienciaDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new ExperienciaMySqlDAO();
     }
 
    
