@@ -4,6 +4,7 @@ import dao.core.AreaDAO;
 import dao.core.CandidatoDAO;
 import factory.DAOListener;
 import java.util.HashMap;
+import java.util.Map;
 import model.Area;
 
 public class TelaRegistro
@@ -20,6 +21,8 @@ public class TelaRegistro
         CandidatoDAO candidatoDAO = DAOListener.getDAOFactory().getCadidatoDao();
         
         model.Candidato candidato = new model.Candidato();
+
+        candidato.setNome(aCampo.get("nome"));
 
         candidatoDAO.insert(candidato);
 
