@@ -4,9 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/test/ExperienciaSQLTeste.java" line="22" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="462582f1-8432-4dc3-8322-9928fef1d337" name="Default" comment="">
+    <list default="true" id="462582f1-8432-4dc3-8322-9928fef1d337" name="Default" comment="Experiencia DAO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TelaRegistro.java" afterPath="$PROJECT_DIR$/src/controller/TelaRegistro.java" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaRegistro.java" afterPath="$PROJECT_DIR$/src/view/TelaRegistro.java" />
+      <change beforePath="$PROJECT_DIR$/src/view/TelaRegistro2.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/CandidatoSQLTeste.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="39" />
+              <caret line="94" column="26" lean-forward="false" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -61,8 +62,8 @@
       <file leaf-file-name="TelaRegistro.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/TelaRegistro.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="348">
+              <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -82,14 +83,14 @@
         <entry file="file://$PROJECT_DIR$/src/factory/MySqlDAOFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="52">
-              <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+              <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
               <folding>
-                <element signature="e#1666#1667#0" expanded="true" />
-                <element signature="e#1708#1709#0" expanded="true" />
-                <element signature="e#1773#1774#0" expanded="true" />
-                <element signature="e#1822#1823#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
-                <element signature="e#1933#1934#0" expanded="true" />
+                <element signature="e#1658#1659#0" expanded="true" />
+                <element signature="e#1700#1701#0" expanded="true" />
+                <element signature="e#1765#1766#0" expanded="true" />
+                <element signature="e#1814#1815#0" expanded="true" />
+                <element signature="e#1877#1878#0" expanded="true" />
+                <element signature="e#1925#1926#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/dao/mysql/CargoMySqlDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
-              <caret line="55" column="18" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="55" selection-end-column="18" />
+              <caret line="55" column="18" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="55" selection-end-column="18" />
               <folding>
                 <element signature="e#0#4789#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -112,10 +113,10 @@
         <entry file="file://$PROJECT_DIR$/src/dao/mysql/CandidatoMySqlDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="225" column="46" lean-forward="true" selection-start-line="225" selection-start-column="46" selection-end-line="225" selection-end-column="46" />
+              <caret line="226" column="46" lean-forward="false" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1511480833827" expanded="true" signature="9133:9139" ph="{...}" />
+                <marker date="1511563371548" expanded="true" signature="9840:9846" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -277,6 +278,12 @@
             </path>
             <path>
               <item name="projeto-integrador" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto-integrador" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projeto-integrador" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -324,7 +331,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/controller/TelaRegistro.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/nbproject/project.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/dao/mysql/CandidatoMySqlDAO.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/factory/DAOFactory.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/factory/MySqlDAOFactory.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/CandidatoSQLTeste.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/view/TelaRegistro.form</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/view/TelaRegistro.java</PATH>
         </FILE-GROUP>
@@ -334,6 +346,37 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Nova pasta/TelaRegistro.form</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Nova pasta/TelaRegistro.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/.netbeans_automatic_build</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/.netbeans_update_resources</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/db/script.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/exporters/SuplementoExporter.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/backgroud.tipos.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.Cadastroclientes.Toplogo.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.cadastroCidades.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.cadastroEstados.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.cadastroSuplementos.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.cidades.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.clientes.Toplogo.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.clientes.logo.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.clientes.logo2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.dinheiro.CadastroCondicoesPagtoS.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.dinheiro.CondicoesPagto.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.dinheiro.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.dinheiro.topo.CadastroformasPagamento.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.dinheiro.topo.formasPagamentos.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.estados.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.marcas.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.pedidoItens.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.suplementos.logo.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.suplementos.logo2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.suplementos.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.topCadastroPedidos.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.topRegistros - Copia.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SistemaSuplemento V2 27.11.15 PRONTO/build/classes/sistemasuplemento/images/background.topVendaseRegistros.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/view/TelaRegistro2.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -703,12 +746,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511551957981</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Experiencia DAO">
+      <created>1511556626112</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511556626112</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -723,7 +772,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24758843" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18814056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18814056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -885,18 +934,18 @@
         <state relative-caret-position="504">
           <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="false" />
+            <element signature="e#396#397#0" expanded="false" />
+            <element signature="e#429#430#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#516#517#0" expanded="false" />
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#624#625#0" expanded="false" />
+            <element signature="e#651#652#0" expanded="false" />
+            <element signature="e#691#692#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -906,7 +955,7 @@
         <state relative-caret-position="108">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -985,14 +1034,14 @@
     <entry file="file://$PROJECT_DIR$/src/factory/MySqlDAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
-          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding>
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
-            <element signature="e#1773#1774#0" expanded="true" />
-            <element signature="e#1822#1823#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#1933#1934#0" expanded="true" />
+            <element signature="e#1658#1659#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1877#1878#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1040,7 +1089,7 @@
     <entry file="file://$PROJECT_DIR$/src/dao/mysql/CargoMySqlDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
-          <caret line="55" column="18" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="55" selection-end-column="18" />
+          <caret line="55" column="18" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="55" selection-end-column="18" />
           <folding>
             <element signature="e#0#4789#0" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -1051,10 +1100,10 @@
     <entry file="file://$PROJECT_DIR$/src/dao/mysql/CandidatoMySqlDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="225" column="46" lean-forward="true" selection-start-line="225" selection-start-column="46" selection-end-line="225" selection-end-column="46" />
+          <caret line="226" column="46" lean-forward="false" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1511480833827" expanded="true" signature="9133:9139" ph="{...}" />
+            <marker date="1511563371548" expanded="true" signature="9840:9846" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1062,15 +1111,15 @@
     <entry file="file://$PROJECT_DIR$/src/test/CandidatoSQLTeste.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="39" />
+          <caret line="94" column="26" lean-forward="false" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/TelaRegistro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="348">
+          <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding />
         </state>
       </provider>
